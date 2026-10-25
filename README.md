@@ -1,17 +1,22 @@
-# drag_target
+# DragTarget
 
-A new Flutter project.
+## Description
 
-## Getting Started
+it is a widget that allow user to drop certain dragged items into targeted area by showing the visual representation of the target
 
-This project is a starting point for a Flutter application.
+## Simple run instruction
 
-A few resources to get you started if this is your first Flutter project:
+### Make sure that you have futter installed in your laptop
+1. clone repository: git clone https://github.com/inezakevin23/drag_target.git
+2. navigate into project folder: cd drag_target
+3. run the application: flutter run
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 3 core attributes
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. builder:  A function that returns the visual representation of the target.
+2. onWillAccept / onWillAcceptWithDetails:  A callback that decides whether to accept the incoming data type before the drop happens.
+3. onAccept / onAcceptWithDetails : A callback that executes when a compatible Draggable is dropped onto the target, allowing you to update your app state
+
+## Final UI screenshot
+
+![Final UI Screenshot](./screenshot.png)
