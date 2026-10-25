@@ -8,6 +8,7 @@ class MyWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyWidget> {
+  int _dogDropCount = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,17 +38,21 @@ class _MyWidgetState extends State<MyWidget> {
           Center(
             child: DragTarget<String>(
               onWillAcceptWithDetails: (details) => details.data == 'dog',
-              onAcceptWithDetails: (details) {},
+              onAcceptWithDetails: (details) {
+                setState(() {
+                  _dogDropCount++; // Increment the state counter
+                });
+              },
               builder: (context, candidateData, rejectedData) {
                 return Container(
                   height: 120,
                   width: 200,
                   color: Colors.grey,
-                  child: const Center(
+                  child: Center(
                     child: Text(
-                      'Drop Dog Here!',
+                      'Drop Dog Here!\nDropped: $_dogDropCount times',
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
                 );
