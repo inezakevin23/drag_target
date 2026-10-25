@@ -19,4 +19,5 @@ it is a widget that allow user to drop certain dragged items into targeted area 
 
 ## Final UI screenshot
 
-![Final UI Screenshot](./screenshot.png)
+![Final UI Screenshot1](./screenshot.png)
+![Final UI Screenshot2](./screenshot2.png)
