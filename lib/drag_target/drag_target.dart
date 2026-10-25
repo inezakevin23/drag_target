@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyWidget extends StatefulWidget {
-  const new({super.key});
+  const MyWidget({super.key});
 
   @override
   State<MyWidget> createState() => _MyWidgetState();
@@ -18,19 +18,23 @@ class _MyWidgetState extends State<MyWidget> {
       ),
       body: Row(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/cow.jpg'),
-                fit: BoxFit.cover,
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/cow.jpg'),
+                  fit: BoxFit.fitWidth,
+                ),
               ),
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/dog.jpg'),
-                fit: BoxFit.cover,
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/dog.jpg'),
+                  fit: BoxFit.fitWidth,
+                ),
               ),
             ),
           ),
